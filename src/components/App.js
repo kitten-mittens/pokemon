@@ -2,6 +2,7 @@ import Component from './Component.js';
 import Header from './Header.js';
 import PokemonList from './PokemonList.js';
 import api from '../services/pokemon-api.js';
+import Paging from './Paging.js';
 
 class App extends Component {
 
@@ -15,6 +16,9 @@ class App extends Component {
         //this renders App/Main
         const main = dom.querySelector('main');
         dom.insertBefore(headerDOM, main);
+
+        const paging = new Paging();
+        main.appendChild(paging.render());
 
         // this renders main list
         const pokemonList = new PokemonList({ pokemons: [] });
