@@ -14,7 +14,11 @@ class Search extends Component {
 
         function setInputFromHash() {
             const queryProps = hashStorage.get();
-            input.value = queryProps.pokemon;
+            if(!input.value) {
+                input.value = '';
+            } else {
+                input.value = queryProps.pokemon;
+            }
         }
         
         setInputFromHash(); 
