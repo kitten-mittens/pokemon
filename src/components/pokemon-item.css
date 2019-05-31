@@ -1,0 +1,13 @@
+.pokemon-item {
+    list-style: none;
+    height: 250px;
+    width: 300px;
+    border: 1px solid orange;
+    background: whitesmoke;
+    text-align: center;
+    margin: 0 10px 10px 0;
+ }
+ 
+ .pokemon-item img {
+    height: 150px;
+ }

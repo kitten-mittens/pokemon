@@ -1,0 +1,10 @@
+.buttons {
+    width: 32px;
+    height: auto;
+    
+}
+
+.prev, .next {
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+}
