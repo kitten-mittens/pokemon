@@ -1,5 +1,6 @@
 import Component from './Component.js';
 import Search from './Search.js';
+import Sort from './Sort.js';
 
 class Header extends Component {
     
@@ -7,6 +8,9 @@ class Header extends Component {
         const dom = this.renderDOM();
         const search = new Search();
         dom.appendChild(search.render());
+
+        const sort = new Sort();
+        dom.appendChild(sort.render());
 
         return dom;
     }

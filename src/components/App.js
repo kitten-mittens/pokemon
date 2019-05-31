@@ -5,6 +5,7 @@ import PokemonList from './PokemonList.js';
 import api from '../services/pokemon-api.js';
 import Paging from './Paging.js';
 import hashStorage from '../hash-storage.js';
+//import sortPokemon from '../sort-pokemon.js';
 
 class App extends Component {
 

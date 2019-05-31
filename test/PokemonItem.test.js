@@ -22,6 +22,7 @@ test('renders template from data', assert => {
         <li class="pokemon-item">
             <h2>venusaur</h2>
             <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png" alt="venusaur">
+            <p>Weight: undefinedkg</p>
         </li>
     `);
 });
