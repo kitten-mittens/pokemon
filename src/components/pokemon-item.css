@@ -6,6 +6,7 @@
     background: whitesmoke;
     text-align: center;
     margin: 0 10px 10px 0;
+    border-radius: 10px;
  }
  
  .pokemon-item img {

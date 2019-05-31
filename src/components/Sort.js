@@ -1,31 +1,30 @@
 import Component from './Component.js';
-// import PokemonItem from './PokemonItem.js';
+import hashStorage from '../hash-storage.js';
 
 class Sort extends Component {
 
-    // render() {
-    //     const form = this.renderDOM();
-    //     const pokemon = new PokemonItem({ pokemon });
-    //     form.addEventListener('submit', event => event.preventDefault());
+    render() {
+        const form = this.renderDOM();
+        const select = form.querySelector('select');
 
-    //     form.addEventListener('input', () => {
-    //         const formData = new FormData(form);
+        form.addEventListener('submit', event => event.preventDefault());
 
-    //         pokemon.sort((a, b) => a.weight - b.weight);
-    //         console.log(form);
-            
-    //     });
+        form.addEventListener('input', () => {
+            const direction = select.value;
+            hashStorage.set({ sort: 'weight', direction });
+        });
 
-    //     return form;
-    // }
+        return form;
+    }
 
     renderTemplate() {
         return /*html*/`
             <form class="sort">
                 <label>Sort by Weight:
-                    <select name="weight">
-                    <option value="heaviest">Heaviest</option>
-                    <option value="lightest">Lightest</option>
+                    <select name="weight" id="weight">
+                    <option value="" hidden disabled selected></option>
+                    <option value="desc">Heaviest</option>
+                    <option value="asc">Lightest</option>
                     </select>
                 </label>
             </form>
