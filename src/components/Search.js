@@ -19,8 +19,7 @@ class Search extends Component {
             input.value = search;
         }
         
-        setInputFromHash();
-        
+        setInputFromHash(); 
 
         window.addEventListener('hashchange', () => {
             setInputFromHash();

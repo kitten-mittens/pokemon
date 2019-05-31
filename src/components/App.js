@@ -1,6 +1,6 @@
 import Component from './Component.js';
 import Header from './Header.js';
-import PokemonList from './PokemonList.js'
+import PokemonList from './PokemonList.js';
 import api from '../services/pokemon-api.js';
 
 class App extends Component {
@@ -19,10 +19,23 @@ class App extends Component {
         // this renders main list
         const pokemonList = new PokemonList({ pokemons: [] });
         main.appendChild(pokemonList.render());
-        
-        api.getPokemons()
-            .then(pokemons => {
-                pokemonList.update({ pokemons });
+
+        function loadPokemon() {
+            const params = window.location.hash.slice(1);
+
+            const searchParams = new URLSearchParams(params);
+            const search = searchParams.get('search');
+
+            api.getPokemons(search)
+                .then(pokemons => {
+                    pokemonList.update({ pokemons });
+                });
+        }
+
+        loadPokemon();
+
+        window.addEventListener('hashchange', () => {
+            loadPokemon();
         });
 
         return dom;

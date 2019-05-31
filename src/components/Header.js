@@ -2,6 +2,7 @@ import Component from './Component.js';
 import Search from './Search.js';
 
 class Header extends Component {
+    
     render() {
         const dom = this.renderDOM();
         const search = new Search();
