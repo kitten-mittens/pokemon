@@ -54,7 +54,7 @@ class Paging extends Component {
             <p class="paging">
                 <button class="prev" ${currentPage === 1 ? 'disabled' : ''}><img class="buttons" src="./assets/pokemon.png" alt="Back Button"></button>
                 <span>Page ${currentPage} of ${lastPage}</span>
-                <button class="next" ${currentPage === lastPage ? 'disabled' : ''}><img class="buttons" src="./assets/pokemon.png" alt="Back Button"></button>
+                <button class="next" ${currentPage === lastPage ? 'disabled' : ''}><img class="buttons" src="./assets/pokemon.png" alt="Next Button"></button>
             </p>
         `;
     }
