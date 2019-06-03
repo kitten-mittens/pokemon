@@ -52,20 +52,6 @@ test('only sets new props on location', assert => {
     assert.equal(result, expected);
 });
 
-// test('removes key from storage', assert => {
-//     // arrange
-//     window.location.hash = 'search=shiny&page=1';
-//     const key = 'page';
-//     const expected = 'search=shiny';
-
-//     // act
-//     hashStorage.remove(key);
-//     const result = window.location.hash.slice(1);
-
-//     // assert
-//     assert.equal(result, expected);
-// });
-
 const hashStorage = {
     get() {
         const hash = window.location.hash.slice(1);

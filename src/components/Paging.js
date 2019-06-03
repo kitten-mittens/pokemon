@@ -20,7 +20,6 @@ class Paging extends Component {
             return dom;
         }    
 
-        //
         function updatePage(change) {
             let page = getCurrentPage();
             page += change;
